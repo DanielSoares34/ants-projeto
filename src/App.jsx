@@ -1,5 +1,6 @@
 import {React} from 'react';
 import Layout1 from './Components/Layout/Layout';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 
 
@@ -7,8 +8,8 @@ function App() {
 
  
   return (
-    <Layout1/>
+    <><AmplifySignOut /><Layout1 /></>
     )
 }
 
-export default App;
+export default withAuthenticator (App);
